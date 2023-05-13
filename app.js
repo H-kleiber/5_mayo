@@ -374,53 +374,102 @@
   
 // promesas
 
-function suma(valor){
+// function sum(valor){
    
-    return new Promise((resolve,reject)=>{
-        setTimeout(() => {
-            resolve({
-            valor,
-            result:valor*valor
-            })
-        }, 0);
-    });
-}
-suma(0)
-.then((obj)=>{
-console.log("inicio promesa");
-console.log(`promise: ${obj.valor},${obj.result} `);
-return suma(1);
-})
-.then((obj)=>{
-    console.log(`promise: ${obj.valor},${obj.result} `);
-    return suma(2);
-})
-.then((obj)=>{ 
-    console.log(`promise: ${obj.valor},${obj.result} `);
-    return suma(3);
-})
-.then((obj)=>{
-    console.log(`promises: ${obj.valor},${obj.result} `);
-    return suma(4);
-})
-.then((obj)=>{
-    console.log(`promises: ${obj.valor},${obj.result} `);
-    return suma(5);
-})
-.then((obj)=>{
-    console.log(`promises: ${obj.valor},${obj.result} `);
-    return suma(6);
-})
-.catch( err=> console.error(err));
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             resolve({
+//             valor,
+//             result:valor*valor
+//             })
+//         }, 0);
+//     });
+// }
+// sum(0)
+// .then((obj)=>{
+// console.log("inicio ");
+// console.log(`: ${obj.valor},${obj.result} `);
+// return sum(1);
+// })
+// .then((obj)=>{
+//     console.log(` ${obj.valor},${obj.result} `);
+//     return sum(2);
+// })
+// .then((obj)=>{ 
+//     console.log(`${obj.valor},${obj.result} `);
+//     return sum(3);
+// })
+// .then((obj)=>{
+//     console.log(` ${obj.valor},${obj.result} `);
+//     return sum(4);
+// })
+// .then((obj)=>{
+//     console.log(`${obj.valor},${obj.result} `);
+//     return sum(5);
+// })
+// .then((obj)=>{
+//     console.log(` ${obj.valor},${obj.result} `);
+//     return sum(6);
+// })
+// .catch( err=> console.error(err));
 
-// callback
-function greeting(name) {
-    alert(`Hello, ${name}`);
-  }
+// // callback
+// function greeting(name) {
+//     alert(`Hello, ${name}`);
+//   }
   
-  function processUserInput(callback) {
-    const name = prompt("Please enter your name.");
-    callback(name);
-  }
+//   function processUserInput(callback) {
+//     const name = prompt("Please enter your name.");
+//     callback(name);
+//   }
   
-  processUserInput(greeting);
+//   processUserInput(greeting);
+
+
+// /* asyncm await */
+// function sum(valor){
+//  return new Promise((resolve,reject)=>{
+// setTimeout(() => {
+//  resolve({
+//  valor,
+//  result:valor*valor
+//  })
+//  }, 0);
+// });
+// }
+
+// async function funtionAsincrona(){
+//     try {
+//         console.log("inicio")
+//         let obj= await sum(0);
+//         console.log(` asyn funtion ${obj.valor} ${obj.result}`);
+//         console.log("inicio")
+//          obj= await sum(1);
+//         console.log(` asyn funtion ${obj.valor} ${obj.result}`);
+//         console.log("inicio")
+//          obj= await sum(2);
+//         console.log(` asyn funtion ${obj.valor} ${obj.result}`);
+//         console.log("inicio")
+//          obj= await sum(3);
+//         console.log(` asyn funtion ${obj.valor} ${obj.result}`);
+//         console.log("inicio")
+//          obj= await sum(4);
+//         console.log(` asyn funtion ${obj.valor} ${obj.result}`);
+//     } catch (error) {
+//         console.log(error)
+        
+//     }
+// }
+// funtionAsincrona()
+
+// Iterables & Iterators 
+// const iterable=[1,2,3,4,5,6,7];
+//  const iterador=iterable[Symbol.iterator]();
+
+//  let next=iterador.next();
+
+//  while (!next.done) {
+//     console.log(next.value);
+//     next=iterador.next();
+    
+//  }
